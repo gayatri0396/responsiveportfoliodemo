@@ -1,0 +1,307 @@
+*{
+  font-family:Montserrat;
+  padding:0;
+  margin:0;
+  box-sizing: border-box
+}
+
+body{
+  background-color: #ffffff;
+  width: 100%;
+  font-family: Montserrat,sans-serif;
+  padding:0;
+  margin:0;
+}
+
+#main{
+  width: 100%;
+  background-color: #ffffff;
+}
+
+ul,a{
+  list-style: none;
+  text-decoration: none;
+}
+
+nav{
+  height:170px;
+  align-content: center;
+  overflow: hidden;
+}
+
+nav img{
+  width: 250px;
+  position: absolute;
+  top: 50px;
+  left: 12%;
+}
+nav ul{
+  float: right;
+  margin-right: 25px;
+  align-items: center;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a{
+  position: relative;
+  font-size: 16px;
+}
+
+nav ul li a:before{
+  position: absolute;
+  transform: scale(0);
+  width:100%;
+  left:0;
+  bottom: 0;
+  height: 4px;
+  transform-origin: right;
+}
+
+nav ul li a:hover:before{
+  transition: scaleX(1);
+  transform-origin: left;
+}
+
+label #btn{
+  color:#333333;
+  font-size:30px;
+  float: right;
+  margin-right: 30px;
+  line-height: 50px;
+  cursor: pointer;
+  display: none;
+  border-color: #333333;
+  width: 30px;
+  height: 30px;
+  border-color: #111111;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+@media(max-width:1118px){
+  nav img{
+    left:25px;
+    float:right;
+    display: block;
+  }
+}
+
+@media (max-width:860px) {
+  label #btn{
+    display: block;
+  }
+
+  ul{
+    width:100%;
+    top:10px;
+    height: 175px;
+    left:200px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: all .5s;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 25px 0;
+    line-height: 10px;
+  }
+  nav ul li a{
+    font-size: 15px;
+  }
+  #check:checked ~ ul{
+    left:0;
+  }
+  #check:checked ~ label #btn{
+    display: none;
+  }
+}
+
+.banner__img{
+background-image: url("images/hero-banner.jpg");
+position: relative;
+background-size: cover;
+width: 100%;
+background-position: center;
+background-repeat: no-repeat;
+height: 700px;
+justify-content: center;
+}
+
+.text__container{
+font-family: Montserrat;
+position: relative;
+text-align: center;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+align-items: center;
+}
+
+.text__container h1{
+  font-family: Montserrat;
+  font-size: 70px;
+  padding-bottom: 25px;
+  font-weight: bold;
+  color: #333333;
+  padding-top: 350px;
+}
+
+.text__container h2{
+  font-family: Montserrat;
+  font-size: 28px;
+  font-weight: 500;
+  color: #333333;
+  padding-bottom: 350px;
+}
+
+.about__heading{
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  font-family: Montserrat;
+  font-weight:600;
+  font-size: 36px;
+  color: #333333;
+  align-items: center;
+  justify-content: center;
+  padding-left: 150px;
+  padding-top: 100px;
+}
+
+.about__text{
+  width: 300px;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 25px;
+  overflow: hidden;
+  margin-right: 250px;
+  vertical-align: middle;
+  padding-bottom: 50px;
+  padding-right: 70px;
+}
+
+.about__btn{
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333333;
+  border: 2px solid #333333;
+  padding:20px 40px ;
+  border-radius: 4px;
+  background-color: #ffffff;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.work{
+  text-align: center;
+  align-items: center;
+  padding-top:100px;
+  padding-bottom:50px;
+  margin-top:100px;
+  background-color: #f7fbff;
+}
+
+.work__grid{
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  padding: 34px;
+  grid-gap: 34px;
+  align-items: stretch;
+  vertical-align: middle;
+  padding-top: 50px;
+}
+.work__grid img{
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.work__btn{
+  font-family: Montserrat;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  color: #333333;
+  background-color: #ffffff;
+  border: 2px solid #333333;
+  padding:20px 40px ;
+  border-radius: 4px;
+  margin-top: 50px;
+}
+
+.work__btn:hover{
+  background:#333333;
+  color: #ffffff;
+}
+
+.centered__work{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.contact__heading h1{
+  font-family: Montserrat;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 36px;
+  color: #333333;
+  padding-top:100px;
+  margin-top:100px;
+  margin-bottom: 34px;
+}
+
+.contact__tagline h4{
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 18px;
+  color: #333333;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 34px;
+  margin-bottom: 34px;
+}
+
+.social__icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 34px;
+  margin-bottom: 100px;
+}
+
+.footer{
+  font-family: Montserrat;
+  font-weight: light;
+  font-size: 16px;
+  color: #333333;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  border:1px solid #f2f2f2;
+}
